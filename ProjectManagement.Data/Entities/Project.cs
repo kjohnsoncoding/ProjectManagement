@@ -17,17 +17,18 @@ namespace ProjectManagement.Data.Entities
 
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }
-        public virtual Customer CustomerName { get; set; }
+        public virtual Customer Customer { get; set; }
 
         [Required]
         public string ProjectDetails { get; set; }
         [Required]
-        public bool ProjectStatus { get; set; }
+        public bool ProjectStatus { get; set; } = false;
         [Required]
         public DateTimeOffset ProjectStartDate { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
 
         [ForeignKey("Employee")]
         public int EmployeeId { get; set; }
-        public virtual Employee AssignedEmployee { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }
