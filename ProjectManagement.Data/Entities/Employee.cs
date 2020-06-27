@@ -10,8 +10,11 @@ namespace ProjectManagement.Data.Entities
 {
     public class Employee
     {
+        [Key]
         public int EmployeeId { get; set; }
+        [Required]
         public string FirstName { get; set; }
+        [Required]
         public string LastName { get; set; }
     }
 }

@@ -9,7 +9,9 @@ namespace ProjectManagement.Data.Entities
 {
     public class Customer
     {
+        [Key]
         public int CustomerId { get; set; }
+        [Required]
         public string CustomerName { get; set; }
     }
 }

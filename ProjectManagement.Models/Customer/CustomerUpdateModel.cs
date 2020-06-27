@@ -8,5 +8,7 @@ namespace ProjectManagement.Models.Customer
 {
     public class CustomerUpdateModel
     {
+        public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
     }
 }
