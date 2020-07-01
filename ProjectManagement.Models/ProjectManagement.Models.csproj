@@ -54,18 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer\CustomerCreateModel.cs" />
-    <Compile Include="Customer\CustomerDeleteModel.cs" />
-    <Compile Include="Customer\CustomerDetailModel.cs" />
-    <Compile Include="Customer\CustomerUpdateModel.cs" />
-    <Compile Include="Employee\EmployeeCreateModel.cs" />
-    <Compile Include="Employee\EmployeeDeleteModel.cs" />
-    <Compile Include="Employee\EmployeeDetailModel.cs" />
-    <Compile Include="Employee\EmployeeUpdateModel.cs" />
-    <Compile Include="Project\ProjectCreateModel.cs" />
-    <Compile Include="Project\ProjectDeleteModel.cs" />
-    <Compile Include="Project\ProjectDetailModel.cs" />
-    <Compile Include="Project\ProjectUpdateModel.cs" />
+    <Compile Include="Customer\CustomerCreate.cs" />
+    <Compile Include="Customer\CustomerList.cs" />
+    <Compile Include="Customer\CustomerDetail.cs" />
+    <Compile Include="Customer\CustomerUpdate.cs" />
+    <Compile Include="Employee\EmployeeCreate.cs" />
+    <Compile Include="Employee\EmployeeList.cs" />
+    <Compile Include="Employee\EmployeeDetail.cs" />
+    <Compile Include="Employee\EmployeeUpdate.cs" />
+    <Compile Include="Project\ProjectCreate.cs" />
+    <Compile Include="Project\ProjectList.cs" />
+    <Compile Include="Project\ProjectDetail.cs" />
+    <Compile Include="Project\ProjectUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectManagement.Models.Employee
 {
-    public class EmployeeUpdateModel
+    public class EmployeeDetail
     {
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }

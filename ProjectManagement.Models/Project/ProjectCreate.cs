@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectManagement.Models.Project
 {
-    public class ProjectDetailModel
+    public class ProjectCreate
     {
         public string ProjectName { get; set; }
         public string ProjectDetails { get; set; }
@@ -14,5 +14,6 @@ namespace ProjectManagement.Models.Project
         public DateTimeOffset ProjectStartDate { get; set; }
         public int EmployeeId { get; set; }
         public int CustomerId { get; set; }
+
     }
 }

@@ -13,6 +13,8 @@ namespace ProjectManagement.Data.Entities
         [Key]
         public int EmployeeId { get; set; }
         [Required]
+        public Guid OwnerId { get; set; }
+        [Required]
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }

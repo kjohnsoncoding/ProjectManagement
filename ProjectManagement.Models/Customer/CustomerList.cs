@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjectManagement.Models.Customer
 {
-    public class CustomerDeleteModel
+    public class CustomerList
     {
         public int CustomerId { get; set; }
         public string CustomerName { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
     }
 }

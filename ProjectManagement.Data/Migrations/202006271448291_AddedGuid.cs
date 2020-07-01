@@ -3,7 +3,7 @@ namespace ProjectManagement.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class anothermigration : DbMigration
+    public partial class AddedGuid : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,8 @@ namespace ProjectManagement.Data.Migrations
                 c => new
                     {
                         CustomerId = c.Int(nullable: false, identity: true),
-                        CustomerName = c.String(),
+                        OwnerId = c.Guid(nullable: false),
+                        CustomerName = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.CustomerId);
             
@@ -21,8 +22,9 @@ namespace ProjectManagement.Data.Migrations
                 c => new
                     {
                         EmployeeId = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        OwnerId = c.Guid(nullable: false),
+                        FirstName = c.String(nullable: false),
+                        LastName = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.EmployeeId);
             
@@ -31,11 +33,13 @@ namespace ProjectManagement.Data.Migrations
                 c => new
                     {
                         ProjectId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
                         ProjectName = c.String(nullable: false),
                         CustomerId = c.Int(nullable: false),
                         ProjectDetails = c.String(nullable: false),
                         ProjectStatus = c.Boolean(nullable: false),
                         ProjectStartDate = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(precision: 7),
                         EmployeeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ProjectId)

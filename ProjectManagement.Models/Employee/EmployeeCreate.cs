@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjectManagement.Models.Employee
 {
-    public class EmployeeDeleteModel
+    public class EmployeeCreate
     {
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
     }
 }
