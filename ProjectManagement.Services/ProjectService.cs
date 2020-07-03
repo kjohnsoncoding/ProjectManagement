@@ -24,6 +24,7 @@ namespace ProjectManagement.Services
             var entity =
                 new Project()
                 {
+                    OwnerId = _userId,
                     ProjectName = model.ProjectName,
                     ProjectDetails = model.ProjectDetails,
                     ProjectStatus = model.ProjectStatus,
@@ -106,7 +107,7 @@ namespace ProjectManagement.Services
         }
 
         // Delete Project
-        public bool DeleteProjet(int projectId)
+        public bool DeleteProject(int projectId)
         {
             using (var ctx = new ApplicationDbContext())
             {

@@ -15,5 +15,7 @@ namespace ProjectManagement.Data.Entities
         public Guid OwnerId { get; set; }
         [Required]
         public string CustomerName { get; set; }
+        public DateTimeOffset CustomerAdded { get; set; }
+        public DateTimeOffset? LastUpdated { get; set; }
     }
 }

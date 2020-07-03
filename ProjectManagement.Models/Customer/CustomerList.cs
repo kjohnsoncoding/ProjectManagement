@@ -10,6 +10,6 @@ namespace ProjectManagement.Models.Customer
     {
         public int CustomerId { get; set; }
         public string CustomerName { get; set; }
-        public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset CustomerAdded { get; set; }
     }
 }

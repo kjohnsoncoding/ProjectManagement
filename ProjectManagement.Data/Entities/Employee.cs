@@ -18,5 +18,7 @@ namespace ProjectManagement.Data.Entities
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
+        public DateTimeOffset EmployeeCreated { get; set; }
+        public DateTimeOffset? LastUpdated { get; set; }
     }
 }

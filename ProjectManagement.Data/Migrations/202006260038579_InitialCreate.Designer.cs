@@ -7,13 +7,13 @@ namespace ProjectManagement.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class AddedGuid : IMigrationMetadata
+    public sealed partial class InitialCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedGuid));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006271448291_AddedGuid"; }
+            get { return "202006260038579_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
