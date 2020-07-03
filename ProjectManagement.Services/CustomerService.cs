@@ -25,7 +25,12 @@ namespace ProjectManagement.Services
                 new Customer()
                 {
                     OwnerId = _userId,
-                    CustomerName = model.CustomerName,
+                    Name = model.Name,
+                    Address = model.Address,
+                    City = model.City,
+                    State = model.State,
+                    PhoneNumber = model.PhoneNumber,
+                    EmailAddress = model.EmailAddress,
                     CustomerAdded = DateTimeOffset.Now
                 };
             using (var ctx = new ApplicationDbContext())
@@ -49,7 +54,7 @@ namespace ProjectManagement.Services
                                     new CustomerList
                                     {
                                         CustomerId = e.CustomerId,
-                                        CustomerName = e.CustomerName,
+                                        CustomerName = e.Name,
                                         CustomerAdded = e.CustomerAdded
                                     }
                                 );
@@ -70,7 +75,12 @@ namespace ProjectManagement.Services
                     new CustomerDetail
                     {
                         CustomerId = entity.CustomerId,
-                        CustomerName = entity.CustomerName,
+                        Name = entity.Name,
+                        Address = entity.Address,
+                        City = entity.City,
+                        State = entity.State,
+                        PhoneNumber = entity.PhoneNumber,
+                        EmailAddress = entity.EmailAddress,
                         CustomerAdded = entity.CustomerAdded,
                         LastUpdated = entity.LastUpdated
                     };
@@ -87,7 +97,12 @@ namespace ProjectManagement.Services
                         .Customers
                         .Single(e => e.CustomerId == model.CustomerId && e.OwnerId == _userId);
 
-                entity.CustomerName = model.CustomerName;
+                entity.Name = model.Name;
+                entity.Address = model.Address;
+                entity.City = model.City;
+                entity.State = model.State;
+                entity.PhoneNumber = model.PhoneNumber;
+                entity.EmailAddress = model.EmailAddress;
                 entity.LastUpdated = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
