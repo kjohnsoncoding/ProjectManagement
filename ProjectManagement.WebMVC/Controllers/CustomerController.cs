@@ -16,7 +16,7 @@ namespace ProjectManagement.WebMVC.Controllers
         public ActionResult Index()
         {
             var service = CreateCustomerService();
-            var model = service.GetCustomers();
+            var model = service.GetEmployees();
 
             return View(model);
         }
@@ -118,8 +118,6 @@ namespace ProjectManagement.WebMVC.Controllers
 
             return RedirectToAction("Index");
         }
-
-
 
         private CustomerService CreateCustomerService()
         {

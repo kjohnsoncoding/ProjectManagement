@@ -41,7 +41,7 @@ namespace ProjectManagement.Services
         }
 
         // Get All Customers
-        public IEnumerable<CustomerList> GetCustomers()
+        public IEnumerable<CustomerList> GetEmployees()
         {
             using (var ctx = new ApplicationDbContext())
             {

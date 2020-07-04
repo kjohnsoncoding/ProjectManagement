@@ -1,30 +1,37 @@
-﻿@model ProjectManagement.Models.Customer.CustomerDetail
+﻿@model ProjectManagement.Models.Employee.EmployeeDetail
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Details";
 }
 
-<h2>Delete</h2>
+<h2>Details</h2>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Customer Detail</h4>
+    <h4>EmployeeDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CustomerId)
+            @Html.DisplayNameFor(model => model.EmployeeId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CustomerId)
+            @Html.DisplayFor(model => model.EmployeeId)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.FirstName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
         </dd>
 
         <dt>
@@ -68,11 +75,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CustomerAdded)
+            @Html.DisplayNameFor(model => model.EmployeeCreated)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CustomerAdded)
+            @Html.DisplayFor(model => model.EmployeeCreated)
         </dd>
 
         <dt>
@@ -84,13 +91,8 @@
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
 </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
