@@ -58,25 +58,9 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202006260038579_InitialCreate.cs" />
-    <Compile Include="Migrations\202006260038579_InitialCreate.Designer.cs">
-      <DependentUpon>202006260038579_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007031731280_InitialMigration.cs" />
-    <Compile Include="Migrations\202007031731280_InitialMigration.Designer.cs">
-      <DependentUpon>202007031731280_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007031914545_UpdatedMigration.cs" />
-    <Compile Include="Migrations\202007031914545_UpdatedMigration.Designer.cs">
-      <DependentUpon>202007031914545_UpdatedMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007032159211_UpdatedEmployee.cs" />
-    <Compile Include="Migrations\202007032159211_UpdatedEmployee.Designer.cs">
-      <DependentUpon>202007032159211_UpdatedEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007051438497_UpdatedEmployeeMigration.cs" />
-    <Compile Include="Migrations\202007051438497_UpdatedEmployeeMigration.Designer.cs">
-      <DependentUpon>202007051438497_UpdatedEmployeeMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202007051706538_InitialMigration.cs" />
+    <Compile Include="Migrations\202007051706538_InitialMigration.Designer.cs">
+      <DependentUpon>202007051706538_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,20 +70,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006260038579_InitialCreate.resx">
-      <DependentUpon>202006260038579_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007031731280_InitialMigration.resx">
-      <DependentUpon>202007031731280_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007031914545_UpdatedMigration.resx">
-      <DependentUpon>202007031914545_UpdatedMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007032159211_UpdatedEmployee.resx">
-      <DependentUpon>202007032159211_UpdatedEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007051438497_UpdatedEmployeeMigration.resx">
-      <DependentUpon>202007051438497_UpdatedEmployeeMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007051706538_InitialMigration.resx">
+      <DependentUpon>202007051706538_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

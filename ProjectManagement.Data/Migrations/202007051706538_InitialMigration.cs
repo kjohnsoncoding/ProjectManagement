@@ -3,7 +3,7 @@ namespace ProjectManagement.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,15 @@ namespace ProjectManagement.Data.Migrations
                 c => new
                     {
                         CustomerId = c.Int(nullable: false, identity: true),
-                        CustomerName = c.String(nullable: false),
+                        OwnerId = c.Guid(nullable: false),
+                        Name = c.String(),
+                        Address = c.String(),
+                        City = c.String(),
+                        State = c.String(),
+                        PhoneNumber = c.String(),
+                        EmailAddress = c.String(),
+                        CustomerAdded = c.DateTimeOffset(nullable: false, precision: 7),
+                        LastUpdated = c.DateTimeOffset(precision: 7),
                     })
                 .PrimaryKey(t => t.CustomerId);
             
@@ -21,8 +29,15 @@ namespace ProjectManagement.Data.Migrations
                 c => new
                     {
                         EmployeeId = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(nullable: false),
-                        LastName = c.String(nullable: false),
+                        OwnerId = c.Guid(nullable: false),
+                        Name = c.String(),
+                        Address = c.String(),
+                        City = c.String(),
+                        State = c.String(),
+                        PhoneNumber = c.String(),
+                        EmailAddress = c.String(),
+                        EmployeeCreated = c.DateTimeOffset(nullable: false, precision: 7),
+                        LastUpdated = c.DateTimeOffset(precision: 7),
                     })
                 .PrimaryKey(t => t.EmployeeId);
             
@@ -31,16 +46,18 @@ namespace ProjectManagement.Data.Migrations
                 c => new
                     {
                         ProjectId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
                         ProjectName = c.String(nullable: false),
                         CustomerId = c.Int(nullable: false),
                         ProjectDetails = c.String(nullable: false),
                         ProjectStatus = c.Boolean(nullable: false),
                         ProjectStartDate = c.DateTimeOffset(nullable: false, precision: 7),
+                        ProjectUpdated = c.DateTimeOffset(precision: 7),
                         EmployeeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ProjectId)
-                .ForeignKey("dbo.Employee", t => t.EmployeeId, cascadeDelete: true)
                 .ForeignKey("dbo.Customer", t => t.CustomerId, cascadeDelete: true)
+                .ForeignKey("dbo.Employee", t => t.EmployeeId, cascadeDelete: true)
                 .Index(t => t.CustomerId)
                 .Index(t => t.EmployeeId);
             
@@ -122,8 +139,8 @@ namespace ProjectManagement.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.Project", "CustomerId", "dbo.Customer");
             DropForeignKey("dbo.Project", "EmployeeId", "dbo.Employee");
+            DropForeignKey("dbo.Project", "CustomerId", "dbo.Customer");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });

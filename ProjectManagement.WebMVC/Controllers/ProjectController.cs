@@ -61,7 +61,12 @@ namespace ProjectManagement.WebMVC.Controllers
             var model =
                 new ProjectUpdate
                 {
-
+                    ProjectId = detail.ProjectId,
+                    ProjectName = detail.ProjectName,
+                    ProjectDetails = detail.ProjectDetails,
+                    ProjectStatus = detail.ProjectStatus,
+                    EmployeeId = detail.EmployeeId,
+                    CustomerId = detail.CustomerId
                 };
 
             return View(model);
