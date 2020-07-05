@@ -25,8 +25,7 @@ namespace ProjectManagement.Services
                 new Employee()
                 {
                     OwnerId = _userId,
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
+                    Name = model.Name,
                     Address = model.Address,
                     City = model.City,
                     State = model.State,
@@ -55,8 +54,7 @@ namespace ProjectManagement.Services
                                     new EmployeeList
                                     {
                                         EmployeeId = e.EmployeeId,
-                                        FirstName = e.FirstName,
-                                        LastName = e.LastName,
+                                        Name = e.Name,
                                         EmployeeCreated = e.EmployeeCreated
                                     }
                                 );
@@ -77,8 +75,7 @@ namespace ProjectManagement.Services
                     new EmployeeDetail
                     {
                         EmployeeId = entity.EmployeeId,
-                        FirstName = entity.FirstName,
-                        LastName = entity.LastName,
+                        Name = entity.Name,
                         Address = entity.Address,
                         City = entity.City,
                         State = entity.State,
@@ -100,8 +97,7 @@ namespace ProjectManagement.Services
                         .Employees
                         .Single(e => e.EmployeeId == model.EmployeeId && e.OwnerId == _userId);
 
-                entity.FirstName = model.FirstName;
-                entity.LastName = model.LastName;
+                entity.Name = model.Name;
                 entity.Address = model.Address;
                 entity.City = model.City;
                 entity.State = model.State;

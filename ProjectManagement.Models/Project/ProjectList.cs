@@ -15,5 +15,9 @@ namespace ProjectManagement.Models.Project
         public string ProjectName { get; set; }
         [Display(Name = "Start Date")]
         public DateTimeOffset ProjectStartDate { get; set; }
+        [Display(Name = "Customer")]
+        public string CustomerName { get; set; }
+        [Display(Name = "Employee")]
+        public string EmployeeName { get; set; }
     }
 }

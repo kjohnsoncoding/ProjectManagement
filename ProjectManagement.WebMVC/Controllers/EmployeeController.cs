@@ -12,7 +12,7 @@ namespace ProjectManagement.WebMVC.Controllers
     [Authorize]
     public class EmployeeController : Controller
     {
-        // GET: Customer
+        // GET: Employee
         public ActionResult Index()
         {
             var service = CreateEmployeeService();
@@ -62,8 +62,7 @@ namespace ProjectManagement.WebMVC.Controllers
                 new EmployeeUpdate
                 {
                     EmployeeId = detail.EmployeeId,
-                    FirstName = detail.FirstName,
-                    LastName = detail.LastName,
+                    Name = detail.Name,
                     Address = detail.Address,
                     City = detail.City,
                     State = detail.State,
