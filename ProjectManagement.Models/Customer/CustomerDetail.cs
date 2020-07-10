@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectManagement.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace ProjectManagement.Models.Customer
         public string Name { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
-        public string State { get; set; }
+        public State State { get; set; }
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
         [Display(Name = "Email Address")]

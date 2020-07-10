@@ -31,6 +31,7 @@ namespace ProjectManagement.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ProjectCreate model)
         {
+
             if (!ModelState.IsValid) return View(model);
 
             var service = CreateProjectService();

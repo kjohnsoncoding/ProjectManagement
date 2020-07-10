@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using ProjectManagement.Data.Entities;
 using ProjectManagement.Models.Employee;
 using ProjectManagement.Services;
 using System;
@@ -31,6 +32,7 @@ namespace ProjectManagement.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(EmployeeCreate model)
         {
+
             if (!ModelState.IsValid) return View(model);
 
             var service = CreateEmployeeService();

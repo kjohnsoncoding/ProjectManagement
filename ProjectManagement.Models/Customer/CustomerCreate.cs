@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectManagement.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace ProjectManagement.Models.Customer
         [Required]
         public string City { get; set; }
         [Required]
-        public string State { get; set; }
+        public State State { get; set; }
         [Required]
         [Display(Name = "Phone Number")]
         [MinLength(12, ErrorMessage = "Please enter phone number in XXX-XXX-XXXX format")]
