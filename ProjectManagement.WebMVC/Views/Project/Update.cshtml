@@ -37,10 +37,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.ProjectStatus, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(model => model.ProjectStatus)
-                @Html.ValidationMessageFor(model => model.ProjectStatus, "", new { @class = "text-danger" })
-            </div>
+            @Html.EnumDropDownListFor(x => x.ProjectStatus, "Select Project Status", new { @class = "form-control" })
         </div>
     </div>
 

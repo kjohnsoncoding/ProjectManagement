@@ -78,6 +78,7 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\ProjectStatusEnum.cs" />
     <Compile Include="Entities\StateEnum.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202007062242461_InitialMigration.cs" />
@@ -95,6 +96,14 @@
     <Compile Include="Migrations\202007092356142_YetAnotherUpdate.cs" />
     <Compile Include="Migrations\202007092356142_YetAnotherUpdate.Designer.cs">
       <DependentUpon>202007092356142_YetAnotherUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007111440122_UpdatedProjectStatus.cs" />
+    <Compile Include="Migrations\202007111440122_UpdatedProjectStatus.Designer.cs">
+      <DependentUpon>202007111440122_UpdatedProjectStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007111445156_UpdatedProjectListPage.cs" />
+    <Compile Include="Migrations\202007111445156_UpdatedProjectListPage.Designer.cs">
+      <DependentUpon>202007111445156_UpdatedProjectListPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007092356142_YetAnotherUpdate.resx">
       <DependentUpon>202007092356142_YetAnotherUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007111440122_UpdatedProjectStatus.resx">
+      <DependentUpon>202007111440122_UpdatedProjectStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007111445156_UpdatedProjectListPage.resx">
+      <DependentUpon>202007111445156_UpdatedProjectListPage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

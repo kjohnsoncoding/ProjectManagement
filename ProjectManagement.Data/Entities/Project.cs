@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ProjectManagement.Data.Entities.ProjectStatusEnum;
 
 namespace ProjectManagement.Data.Entities
 {
@@ -22,7 +23,7 @@ namespace ProjectManagement.Data.Entities
         [Required]
         public string ProjectDetails { get; set; }
         [Required]
-        public bool ProjectStatus { get; set; } = false;
+        public ProjectStatus ProjectStatus { get; set; }
         [Required]
         public DateTimeOffset ProjectStartDate { get; set; }
         public DateTimeOffset? ProjectUpdated { get; set; }

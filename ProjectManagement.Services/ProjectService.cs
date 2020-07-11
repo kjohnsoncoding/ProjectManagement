@@ -54,7 +54,8 @@ namespace ProjectManagement.Services
                                     {
                                         ProjectId = e.ProjectId,
                                         ProjectName = e.ProjectName,
-                                        ProjectStartDate = e.ProjectStartDate
+                                        ProjectStartDate = e.ProjectStartDate,
+                                        ProjectStatus = e.ProjectStatus
                                     }
                                 );
                 return query.ToArray();

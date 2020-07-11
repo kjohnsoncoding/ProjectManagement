@@ -33,32 +33,32 @@
             @Html.DisplayNameFor(model => model.ProjectStartDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CustomerName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EmployeeName)
+            @Html.DisplayNameFor(model => model.ProjectStatus)
         </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProjectId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProjectName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProjectStartDate)
-            </td>
-            <td>
-                @Html.ActionLink("Update", "Update", new { id = item.ProjectId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProjectId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProjectName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProjectStartDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProjectStatus)
+    </td>
+    <td>
+        @Html.ActionLink("Update", "Update", new { id = item.ProjectId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })
+    </td>
+</tr>
     }
 
 </table>
