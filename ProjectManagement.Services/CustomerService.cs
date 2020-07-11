@@ -26,6 +26,7 @@ namespace ProjectManagement.Services
                 {
                     OwnerId = _userId,
                     Name = model.Name,
+                    CustomerType = model.CustomerType,
                     Address = model.Address,
                     City = model.City,
                     State = model.State,
@@ -76,6 +77,7 @@ namespace ProjectManagement.Services
                     {
                         CustomerId = entity.CustomerId,
                         Name = entity.Name,
+                        CustomerType = entity.CustomerType,
                         Address = entity.Address,
                         City = entity.City,
                         State = entity.State,
@@ -98,6 +100,7 @@ namespace ProjectManagement.Services
                         .Single(e => e.CustomerId == model.CustomerId && e.OwnerId == _userId);
 
                 entity.Name = model.Name;
+                entity.CustomerType = model.CustomerType;
                 entity.Address = model.Address;
                 entity.City = model.City;
                 entity.State = model.State;

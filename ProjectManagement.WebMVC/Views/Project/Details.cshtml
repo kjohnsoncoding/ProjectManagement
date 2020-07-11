@@ -27,6 +27,22 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Equipment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.ProjectDetails)
         </dt>
 
@@ -77,6 +93,14 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Update", "Update", new { id = Model.ProjectId }) |
-    @Html.ActionLink("Back to List", "Index")
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Options
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Update", "Update", new { id = Model.ProjectId })</li>
+            <li>@Html.ActionLink("Back to List", "Index")</li>
+        </ul>
+    </div>
 </p>

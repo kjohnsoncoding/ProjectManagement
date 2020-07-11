@@ -4,27 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+    <h2>@Html.DisplayFor(model => model.Name)</h2>
 
 <div>
-    <h4>EmployeeDetail</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.EmployeeId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmployeeId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+        @Html.HiddenFor(model => model.EmployeeId)
 
         <dt>
             @Html.DisplayNameFor(model => model.Address)
@@ -85,6 +70,14 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Update", "Update", new { id = Model.EmployeeId }) |
-    @Html.ActionLink("Back to List", "Index")
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Options
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Update", "Update", new { id = Model.EmployeeId })</li>
+            <li>@Html.ActionLink("Back to List", "Index")</li>
+        </ul>
+    </div>
 </p>

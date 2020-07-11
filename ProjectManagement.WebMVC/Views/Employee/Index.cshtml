@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <input type="button" class="btn btn-primary btn-sm" value="New Employee" onclick="location.href='@Url.Action("Create", "Employee")'">
 </p>
 
 @if (TempData.ContainsKey("SaveResult"))
@@ -47,9 +47,17 @@
                 @Html.DisplayFor(modelItem => item.EmployeeCreated)
             </td>
             <td>
-                @Html.ActionLink("Update", "Update", new { id = item.EmployeeId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.EmployeeId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId })
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Options
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Update", "Update", new { id = item.EmployeeId })</li>
+                        <li>@Html.ActionLink("Details", "Details", new { id = item.EmployeeId })</li>
+                        <li>@Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId })</li>
+                    </ul>
+                </div>
             </td>
         </tr>
     }

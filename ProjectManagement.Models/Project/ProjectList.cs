@@ -10,7 +10,7 @@ namespace ProjectManagement.Models.Project
 {
     public class ProjectList
     {
-        [Display(Name = "ID")]
+        [Display(Name = "Job Number")]
         public int ProjectId { get; set; }
         [Display(Name = "Project Name")]
         public string ProjectName { get; set; }

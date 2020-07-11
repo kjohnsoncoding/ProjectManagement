@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ProjectManagement.Data.Entities.Enums;
 
 namespace ProjectManagement.Models.Customer
 {
@@ -12,9 +13,11 @@ namespace ProjectManagement.Models.Customer
     {
         public int CustomerId { get; set; }
         public string Name { get; set; }
+        [Display(Name = "Customer Type")]
+        public CustomerType CustomerType { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
-        public State State { get; set; }
+        public Data.Entities.State State { get; set; }
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
         [Display(Name = "Email Address")]

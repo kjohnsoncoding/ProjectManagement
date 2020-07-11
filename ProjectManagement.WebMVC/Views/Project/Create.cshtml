@@ -24,6 +24,20 @@
     </div>
 
     <div class="form-group">
+        @Html.LabelFor(model => model.Equipment, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(x => x.Equipment, "Preferred Equipment", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Vehicle, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(x => x.Vehicle, "Select Vehicle", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
         @Html.LabelFor(model => model.ProjectDetails, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ProjectDetails, new { htmlAttributes = new { @class = "form-control" } })

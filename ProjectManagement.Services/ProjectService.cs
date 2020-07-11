@@ -26,6 +26,8 @@ namespace ProjectManagement.Services
                 {
                     OwnerId = _userId,
                     ProjectName = model.ProjectName,
+                    Equipment = model.Equipment,
+                    Vehicle = model.Vehicle,
                     ProjectDetails = model.ProjectDetails,
                     ProjectStatus = model.ProjectStatus,
                     EmployeeId = model.EmployeeId,
@@ -76,6 +78,8 @@ namespace ProjectManagement.Services
                     {
                         ProjectId = entity.ProjectId,
                         ProjectName = entity.ProjectName,
+                        Equipment = entity.Equipment,
+                        Vehicle = entity.Vehicle,
                         ProjectDetails = entity.ProjectDetails,
                         ProjectStatus = entity.ProjectStatus,
                         EmployeeId = entity.EmployeeId,
@@ -97,6 +101,8 @@ namespace ProjectManagement.Services
                         .Single(e => e.ProjectId == model.ProjectId && e.OwnerId == _userId);
 
                 entity.ProjectName = model.ProjectName;
+                entity.Equipment = model.Equipment;
+                entity.Vehicle = model.Vehicle;
                 entity.ProjectDetails = model.ProjectDetails;
                 entity.ProjectStatus = model.ProjectStatus;
                 entity.EmployeeId = model.EmployeeId;
