@@ -17,7 +17,7 @@ namespace ProjectManagement.Models.Customer
         public CustomerType CustomerType { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
-        public Data.Entities.State State { get; set; }
+        public State State { get; set; }
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
         [Display(Name = "Email Address")]

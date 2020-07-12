@@ -80,6 +80,7 @@
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\ProjectStatusEnum.cs" />
     <Compile Include="Entities\Enums.cs" />
+    <Compile Include="Entities\Repositories.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202007062242461_InitialMigration.cs" />
     <Compile Include="Migrations\202007062242461_InitialMigration.Designer.cs">
@@ -109,6 +110,10 @@
     <Compile Include="Migrations\202007111815232_UpdatedProjectAndCustomerInformation.Designer.cs">
       <DependentUpon>202007111815232_UpdatedProjectAndCustomerInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007121756044_ChangesMadeToEmployeesAndCustomers.cs" />
+    <Compile Include="Migrations\202007121756044_ChangesMadeToEmployeesAndCustomers.Designer.cs">
+      <DependentUpon>202007121756044_ChangesMadeToEmployeesAndCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -137,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007111815232_UpdatedProjectAndCustomerInformation.resx">
       <DependentUpon>202007111815232_UpdatedProjectAndCustomerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007121756044_ChangesMadeToEmployeesAndCustomers.resx">
+      <DependentUpon>202007121756044_ChangesMadeToEmployeesAndCustomers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

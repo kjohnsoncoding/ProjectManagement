@@ -22,7 +22,7 @@ namespace ProjectManagement.Models.Customer
         [Required]
         public string City { get; set; }
         [Required]
-        public Data.Entities.State State { get; set; }
+        public State State { get; set; }
         [Required]
         [Display(Name = "Phone Number")]
         [MinLength(12, ErrorMessage = "Please enter phone number in XXX-XXX-XXXX format")]
@@ -32,58 +32,4 @@ namespace ProjectManagement.Models.Customer
         [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
     }
-
-    //public enum State
-    //{
-    //    Alabama,
-    //    Alaska,
-    //    Arizona,
-    //    Arkansas,
-    //    California,
-    //    Colorado,
-    //    Connecticut,
-    //    Delaware,
-    //    Florida,
-    //    Georgia,
-    //    Hawaii,
-    //    Idaho,
-    //    Illinois,
-    //    Indiana,
-    //    Iowa,
-    //    Kansas,
-    //    Kentucky,
-    //    Louisiana,
-    //    Maine,
-    //    Maryland,
-    //    Massachusetts,
-    //    Michigan,
-    //    Minnesota,
-    //    Mississippi,
-    //    Missouri,
-    //    Montana,
-    //    Nebraska,
-    //    Nevada,
-    //    New_Hampshire,
-    //    New_Jersey,
-    //    New_Mexico,
-    //    New_York,
-    //    North_Carolina,
-    //    North_Dakota,
-    //    Ohio,
-    //    Oklahoma,
-    //    Oregon,
-    //    Pennsylvania,
-    //    Rhode_Island,
-    //    South_Carolina,
-    //    South_Dakota,
-    //    Tennessee,
-    //    Texas,
-    //    Utah,
-    //    Vermont,
-    //    Virginia,
-    //    Washington,
-    //    West_Virginia,
-    //    Wisconsin,
-    //    Wyoming
-    //}
 }

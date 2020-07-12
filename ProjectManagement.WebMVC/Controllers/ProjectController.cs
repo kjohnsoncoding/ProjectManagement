@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using static ProjectManagement.Data.Entities.Repositories;
 
 namespace ProjectManagement.WebMVC.Controllers
 {
@@ -21,18 +22,33 @@ namespace ProjectManagement.WebMVC.Controllers
             return View(model);
         }
 
-        // GET
+        // GET: Create
         public ActionResult Create()
         {
-            return View();
+            var model = new ProjectCreate();
+            var employeeList = new EmployeeRepo();
+            var customerList = new CustomerRepo();
+
+            model.Customers = customerList.GetCustomers();
+            model.Employees = employeeList.GetEmployees();
+            return View(model);
         }
 
+        // POST: Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ProjectCreate model)
         {
 
-            if (!ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid)
+            {
+                var employeeList = new EmployeeRepo();
+                var customerList = new CustomerRepo();
+
+                model.Customers = customerList.GetCustomers();
+                model.Employees = employeeList.GetEmployees();
+                return View(model);
+            }
 
             var service = CreateProjectService();
 

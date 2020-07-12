@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using static ProjectManagement.Data.Entities.Enums;
 using static ProjectManagement.Data.Entities.ProjectStatusEnum;
 
@@ -23,13 +24,18 @@ namespace ProjectManagement.Models.Project
         public string ProjectDetails { get; set; }
         [Display(Name = "Project Status")]
         public ProjectStatus ProjectStatus { get; set; }
+
+        [Display(Name = "Employee")]
+        public int? EmployeeId { get; set; }
+        public IEnumerable<SelectListItem> Employees { get; set; }
+
+        [Display(Name = "Customer")]
+        public int? CustomerId { get; set; }
+        public IEnumerable<SelectListItem> Customers { get; set; }
+
         [Display(Name = "Created")]
         public DateTimeOffset ProjectStartDate { get; set; }
         [Display(Name = "Last Updated")]
         public DateTimeOffset? ProjectUpdated { get; set; }
-        [Display(Name = "Employee")]
-        public int EmployeeId { get; set; }
-        [Display(Name = "Customer")]
-        public int CustomerId { get; set; }
     }
 }

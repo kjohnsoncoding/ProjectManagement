@@ -20,7 +20,9 @@ namespace ProjectManagement.Data.Entities
         public int ProjectId { get; set; }
         [Required]
         public string ProjectName { get; set; }
+        [Required]
         public Equipment Equipment { get; set; }
+        [Required]
         public Vehicle Vehicle { get; set; }
         [Required]
         public string ProjectDetails { get; set; }
@@ -31,13 +33,13 @@ namespace ProjectManagement.Data.Entities
         public DateTimeOffset? ProjectUpdated { get; set; }
 
         // Customer Information 
-        [ForeignKey("Customer")]
-        public int CustomerId { get; set; }
+        [Required, ForeignKey("Customer")]
+        public int? CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
 
         // Employee Information
-        [ForeignKey("Employee")]
-        public int EmployeeId { get; set; }
+        [Required, ForeignKey("Employee")]
+        public int? EmployeeId { get; set; }
         public virtual Employee Employee { get; set; }
     }
 }
