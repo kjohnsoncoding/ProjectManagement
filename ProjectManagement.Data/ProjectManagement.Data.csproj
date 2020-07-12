@@ -114,6 +114,10 @@
     <Compile Include="Migrations\202007121756044_ChangesMadeToEmployeesAndCustomers.Designer.cs">
       <DependentUpon>202007121756044_ChangesMadeToEmployeesAndCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007122148482_UpdatedProjectList.cs" />
+    <Compile Include="Migrations\202007122148482_UpdatedProjectList.Designer.cs">
+      <DependentUpon>202007122148482_UpdatedProjectList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007121756044_ChangesMadeToEmployeesAndCustomers.resx">
       <DependentUpon>202007121756044_ChangesMadeToEmployeesAndCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007122148482_UpdatedProjectList.resx">
+      <DependentUpon>202007122148482_UpdatedProjectList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
