@@ -84,8 +84,8 @@ namespace ProjectManagement.Services
                         Vehicle = entity.Vehicle,
                         ProjectDetails = entity.ProjectDetails,
                         ProjectStatus = entity.ProjectStatus,
-                        EmployeeId = entity.EmployeeId,
-                        CustomerId = entity.CustomerId,
+                        EmployeeName = entity.Employee.Name,
+                        CustomerName = entity.Customer.Name,
                         ProjectStartDate = entity.ProjectStartDate,
                         ProjectUpdated = entity.ProjectUpdated
                     };

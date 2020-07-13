@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using ProjectManagement.Data.Entities;
 using ProjectManagement.Models.Project;
 using ProjectManagement.Services;
 using System;
@@ -82,8 +83,8 @@ namespace ProjectManagement.WebMVC.Controllers
                     ProjectName = detail.ProjectName,
                     ProjectDetails = detail.ProjectDetails,
                     ProjectStatus = detail.ProjectStatus,
-                    EmployeeId = detail.EmployeeId,
-                    CustomerId = detail.CustomerId
+                    EmployeeName = detail.EmployeeName,
+                    CustomerName = detail.CustomerName
                 };
 
             return View(model);
