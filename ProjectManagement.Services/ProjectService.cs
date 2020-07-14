@@ -107,8 +107,8 @@ namespace ProjectManagement.Services
                 entity.Vehicle = model.Vehicle;
                 entity.ProjectDetails = model.ProjectDetails;
                 entity.ProjectStatus = model.ProjectStatus;
-                //entity.EmployeeId = model.EmployeeId;
-                //entity.CustomerId = model.CustomerId;
+                entity.EmployeeId = model.EmployeeId;
+                entity.CustomerId = model.CustomerId;
                 entity.ProjectUpdated = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
