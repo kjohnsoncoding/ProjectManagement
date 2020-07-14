@@ -25,16 +25,16 @@ namespace ProjectManagement.Models.Project
         [Display(Name = "Project Status")]
         public ProjectStatus ProjectStatus { get; set; }
 
-        [Display(Name = "Employee")]
-        public string EmployeeName { get; set; }
-        public int? EmployeeId { get; set; }
-        public virtual Data.Entities.Employee Employee { get; set; }
-        public IEnumerable<SelectListItem> Employees { get; set; }
+        //[Display(Name = "Employee")]
+        //public string EmployeeName { get; set; }
+        //public int? EmployeeId { get; set; }
+        //public virtual Data.Entities.Employee Employee { get; set; }
+        //public IEnumerable<SelectListItem> Employees { get; set; }
 
-        [Display(Name = "Customer")]
-        public string CustomerName { get; set; }
-        public int? CustomerId { get; set; }
-        public virtual Data.Entities.Customer Customer { get; set; }
-        public IEnumerable<SelectListItem> Customers { get; set; }
+        //[Display(Name = "Customer")]
+        //public string CustomerName { get; set; }
+        //public int? CustomerId { get; set; }
+        //public virtual Data.Entities.Customer Customer { get; set; }
+        //public IEnumerable<SelectListItem> Customers { get; set; }
     }
 }

@@ -83,10 +83,10 @@ namespace ProjectManagement.WebMVC.Controllers
                     ProjectName = detail.ProjectName,
                     ProjectDetails = detail.ProjectDetails,
                     ProjectStatus = detail.ProjectStatus,
-                    EmployeeName = detail.EmployeeName,
-                    EmployeeId = detail.EmployeeId,
-                    CustomerName = detail.CustomerName,
-                    CustomerId = detail.CustomerId
+                    //EmployeeName = detail.EmployeeName,
+                    //EmployeeId = detail.EmployeeId,
+                    //CustomerName = detail.CustomerName,
+                    //CustomerId = detail.CustomerId
                 };
 
             return View(model);
@@ -96,15 +96,15 @@ namespace ProjectManagement.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Update(int id, ProjectUpdate model)
         {
-            if (!ModelState.IsValid)
-            {
-                var employeeList = new EmployeeRepo();
-                var customerList = new CustomerRepo();
+            //if (!ModelState.IsValid)
+            //{
+            //    var employeeList = new EmployeeRepo();
+            //    var customerList = new CustomerRepo();
 
-                model.Customers = customerList.GetCustomers();
-                model.Employees = employeeList.GetEmployees();
-                return View(model);
-            }
+            //    model.Customers = customerList.GetCustomers();
+            //    model.Employees = employeeList.GetEmployees();
+            //    return View(model);
+            //}
 
             if (model.ProjectId != id)
             {
