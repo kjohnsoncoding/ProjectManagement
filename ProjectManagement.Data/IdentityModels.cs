@@ -46,6 +46,11 @@ namespace ProjectManagement.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            //modelBuilder.Entity<Project>()
+            //    .HasOptional<Customer>(e => e.Customer)
+            //    .WithMany()
+            //    .WillCascadeOnDelete(false);
         }
     }
 

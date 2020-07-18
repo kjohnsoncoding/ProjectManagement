@@ -176,7 +176,11 @@ namespace ProjectManagement.Data.Entities
             [Display(Name = "Fire")]
             Fire,
             [Display(Name = "Police")]
-            Police
+            Police,
+            [Display(Name = "Private Security")]
+            PrivateSecurity,
+            [Display(Name = "Towing/Recovery")]
+            Towing
         }
     }
 }
