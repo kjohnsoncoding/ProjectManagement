@@ -1,17 +1,21 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h4>Have any questions or comments regarding this application? Feel free to get in touch!</h4>
+<h2>@ViewBag.Title</h2>
+<h5><b>Have any feedback??</b> User feedback is critical when developing and supporting applications. Without the users providing feedback to developers, how would we know when there are issues or ways we can improve our products? Below you will find various ways that you can reach me to provide feedback. Whether you want to provide positive feedback, critical feedback, or just offer up some suggestions, I welcome them all!</h5>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<br />
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div id="contactMe">
+    <div class="container">
+        <div style="text-align: left;">
+            <form action="https://formspree.io/xaybgeey" method="POST">
+                <label for="name"><b>Name:</b></label><br /><input type="text" id="name" name="name" /><br /><br />
+                <label for="email"><b>Email:</b></label><br /><input type="email" id="email" name="email" /><br /><br />
+                <label for="phone"><b>Phone Number:</b></label><br /><input type="tel" id="phone" name="phone" /><br /><br />
+                <label for="message"><b>Message:</b></label><br /><textarea type="text" id="message" name="message"></textarea><br /><br />
+                <input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+            </form>
+        </div>
+    </div>
+</div>
