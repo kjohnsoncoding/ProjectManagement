@@ -26,5 +26,12 @@ namespace ProjectManagement.WebMVC.Controllers
 
             return View();
         }
+
+        public ActionResult Updates()
+        {
+            ViewBag.Message = "Your update page.";
+
+            return View();
+        }
     }
 }
