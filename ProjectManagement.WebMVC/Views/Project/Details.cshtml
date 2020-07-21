@@ -5,69 +5,43 @@
 }
 
 <h2>Project Information</h2>
-
+@Html.HiddenFor(model => model.ProjectId)
 <div>
     <h4>@Html.DisplayFor(model => model.ProjectName)</h4>
     <h6>@Html.DisplayNameFor(model => model.ProjectStartDate): @Html.DisplayFor(model => model.ProjectStartDate) | @Html.DisplayNameFor(model => model.ProjectUpdated): @Html.DisplayFor(model => model.ProjectUpdated)</h6>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ProjectId)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProjectId)
-        </dd>
+    <div class="row">
+        <div class="col-md-6">
+            <h4><strong>@Html.DisplayNameFor(model => model.ProjectDetails)</strong></h4>
+            <p>@Html.DisplayFor(model => model.ProjectDetails)</p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Equipment)
-        </dt>
+            <hr />
 
-        <dd>
-            @Html.DisplayFor(model => model.Equipment)
-        </dd>
+            <h4><strong>@Html.DisplayNameFor(model => model.Equipment)</strong></h4>
+            <p>@Html.DisplayFor(model => model.Equipment)</p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Vehicle)
-        </dt>
+            <hr />
 
-        <dd>
-            @Html.DisplayFor(model => model.Vehicle)
-        </dd>
+            <h4><strong> @Html.DisplayNameFor(model => model.Vehicle)</strong></h4>
+            <p>@Html.DisplayFor(model => model.Vehicle)</p>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ProjectDetails)
-        </dt>
+        <div class="col-md-6">
+            <h4><strong>@Html.DisplayNameFor(model => model.ProjectStatus)</strong></h4>
+            <p>@Html.DisplayFor(model => model.ProjectStatus)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProjectDetails)
-        </dd>
+            <hr />
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ProjectStatus)
-        </dt>
+            <h4><strong>@Html.DisplayNameFor(model => model.Customer)</strong></h4>
+            <p>@Html.DisplayFor(model => model.CustomerName)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProjectStatus)
-        </dd>
+            <hr />
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Employee)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmployeeName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Customer)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CustomerName)
-        </dd>
-
-    </dl>
+            <h4><strong>@Html.DisplayNameFor(model => model.Employee)</strong></h4>
+            <p>@Html.DisplayFor(model => model.EmployeeName)</p>
+        </div>
+    </div>
 </div>
 <p>
     <div class="dropdown">
