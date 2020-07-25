@@ -108,7 +108,6 @@ namespace ProjectManagement.Services
                 entity.ProjectDetails = model.ProjectDetails;
                 entity.ProjectStatus = model.ProjectStatus;
                 entity.EmployeeId = model.EmployeeId;
-                entity.CustomerId = model.CustomerId;
                 entity.ProjectUpdated = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;

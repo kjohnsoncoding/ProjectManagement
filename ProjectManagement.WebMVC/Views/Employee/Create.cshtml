@@ -71,7 +71,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    <input type="button" class="btn btn-primary btn-sm" style="width: 140px;" value=" &laquo; Back to List" onclick="location.href='@Url.Action("Index", "Employee")'">
 </div>
 
 @section Scripts {

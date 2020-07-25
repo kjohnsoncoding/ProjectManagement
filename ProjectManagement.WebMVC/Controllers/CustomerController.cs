@@ -63,6 +63,7 @@ namespace ProjectManagement.WebMVC.Controllers
                 {
                     CustomerId = detail.CustomerId,
                     Name = detail.Name,
+                    CustomerType = detail.CustomerType,
                     Address = detail.Address,
                     City = detail.City,
                     State = detail.State,

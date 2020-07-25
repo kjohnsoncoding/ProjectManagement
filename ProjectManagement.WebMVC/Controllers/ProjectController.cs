@@ -78,21 +78,21 @@ namespace ProjectManagement.WebMVC.Controllers
             var service = CreateProjectService();
             var detail = service.GetProjectById(id);
             var employeeList = new EmployeeRepo();
-            var customerList = new CustomerRepo();
+            //var customerList = new CustomerRepo();
             var model =
                 new ProjectUpdate
                 {
                     ProjectId = detail.ProjectId,
                     ProjectName = detail.ProjectName,
+                    Equipment = detail.Equipment,
+                    Vehicle = detail.Vehicle,
                     ProjectDetails = detail.ProjectDetails,
                     ProjectStatus = detail.ProjectStatus,
                     EmployeeName = detail.EmployeeName,
-                    EmployeeId = detail.EmployeeId,
-                    CustomerName = detail.CustomerName,
-                    CustomerId = detail.CustomerId
+                    EmployeeId = detail.EmployeeId
                 };
             model.Employees = employeeList.GetEmployees();
-            model.Customers = customerList.GetCustomers();
+            //model.Customers = customerList.GetCustomers();
             return View(model);
         }
 

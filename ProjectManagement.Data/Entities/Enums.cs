@@ -170,7 +170,7 @@ namespace ProjectManagement.Data.Entities
         public enum CustomerType
         {
             [Display(Name = "Construction")]
-            Construction,
+            Construction = 1,
             [Display(Name = "EMS")]
             EMS,
             [Display(Name = "Fire")]
