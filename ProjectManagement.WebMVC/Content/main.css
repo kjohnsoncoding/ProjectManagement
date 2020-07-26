@@ -2,6 +2,14 @@
     width: 90%;
 }
 
+.jumotron_new {
+    padding-top: -30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #FFF;
+}
+
 #contactMe {
     width: 100%;
     padding: 0;
