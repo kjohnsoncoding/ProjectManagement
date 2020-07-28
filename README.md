@@ -16,3 +16,10 @@ create a project, so they will need to be created before a project can be create
 
 ## More to come
 While this is the initial deployment of the application, there will be plenty more to come! So please pay attention to this section, I will list feature updates here.
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<i>Last Updated: July 27, 2020</i>
