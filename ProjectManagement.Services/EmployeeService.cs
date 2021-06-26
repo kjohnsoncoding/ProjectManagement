@@ -18,7 +18,7 @@ namespace ProjectManagement.Services
             _userId = userId;
         }
 
-        // Create Customer
+        // Create Employee
         public bool CreateEmployee(EmployeeCreate model)
         {
             var employee =
@@ -40,7 +40,7 @@ namespace ProjectManagement.Services
             }
         }
 
-        // Get All Customers
+        // Get All Employees
         public IEnumerable<EmployeeList> GetEmployees()
         {
             using (var ctx = new ApplicationDbContext())
@@ -62,7 +62,7 @@ namespace ProjectManagement.Services
             }
         }
 
-        // Get Single Customer
+        // Get Single Employees
         public EmployeeDetail GetEmployeeById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -87,7 +87,7 @@ namespace ProjectManagement.Services
             }
         }
 
-        // Update Customer
+        // Update Employee
         public bool UpdateEmployee(EmployeeUpdate model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -109,7 +109,7 @@ namespace ProjectManagement.Services
             }
         }
 
-        // Delete Customer
+        // Delete Employee
         public bool DeleteEmployee(int employeeId)
         {
             using (var ctx = new ApplicationDbContext())
